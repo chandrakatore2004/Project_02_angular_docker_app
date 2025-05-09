@@ -17,7 +17,7 @@ spec:
         - name: ecommstorecontainer
           image: chandrakatore1977/ecomm_store
           ports:
-            - containerPort: 3000
+            - containerPort: 80  # Changed from 3000 to 80
           env:
             - name: BACKEND_URL
               value: "http://productssvc"
@@ -32,4 +32,4 @@ spec:
     app: ecommstore
   ports:
     - port: 80
-      targetPort: 3000
+      targetPort: 80  # Match updated containerPort
